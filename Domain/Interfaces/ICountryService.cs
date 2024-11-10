@@ -6,7 +6,7 @@ namespace WebAPI.Domain.Interfaces
     {
         Task<IEnumerable<Country>> GetCountriesAsync();
         Task<Country> CreateCountryAsync(Country country);
-        Task<Country> GetCountryById(Guid id);
+        Task<Country> GetCountryByIdAsync(Guid id);
         Task<Country> EditCountryAsync(Country country);
         Task<Country> DeleteCountryAsync(Guid Id);      
     }
