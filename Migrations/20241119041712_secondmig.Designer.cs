@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPI.DAL;
 
@@ -11,9 +12,11 @@ using WebAPI.DAL;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(DataBasecontext))]
-    partial class DataBasecontextModelSnapshot : ModelSnapshot
+    [Migration("20241119041712_secondmig")]
+    partial class secondmig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
