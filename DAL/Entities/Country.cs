@@ -9,5 +9,8 @@ namespace WebAPI.DAL.Entities
         [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caracteres")] //Longitud max
         [Required(ErrorMessage = "Es campo {0} obligatorio")] //Campo obligatorio
         public string Name { get; set; }
+
+        [Display(Name = "Estado/Departamento")]
+        public ICollection<State>? States { get; set; }
     }
 }

@@ -15,10 +15,13 @@ namespace WebAPI.DAL
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique(); //se crea un indice para la tabla country para el campo name
+
+            modelBuilder.Entity<State>().HasIndex("Name", "CountryId").IsUnique();
         }
 
         #region DbSets
         public DbSet<Country> Countries { get; set; }
+        public DbSet<State> States { get; set; }
         #endregion
     }
 }
