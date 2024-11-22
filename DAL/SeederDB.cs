@@ -20,6 +20,7 @@ namespace WebAPI.DAL
             await _context.Database.EnsureCreatedAsync();
 
             await PopulateCountriesAsync();
+            await _context.SaveChangesAsync();
         }
 
         #region Private Methods
